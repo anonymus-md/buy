@@ -1,162 +1,147 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PteroShop - Toko Panel Pterodactyl</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background: #0d6efd;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 30px auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .service-card h3 {
-      color: #0d6efd;
-    }
-    .service-card button {
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #0d6efd;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .service-card button:hover {
-      background: #084298;
-    }
-    .about, .contact {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    form {
-      display: grid;
-      gap: 10px;
-    }
-    form input, form textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
-    }
-    form button {
-      background: #0d6efd;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    footer {
-      background: #0d6efd;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-    footer a {
-      color: #fff;
-      margin: 0 5px;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Hosting Saya</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .video-player-container {
+            max-width: 640px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        video {
+            width: 100%;
+            display: block;
+        }
+        
+        .share-section {
+            padding: 15px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .share-section h4 {
+            margin: 0 0 10px 0;
+            color: #555;
+        }
+        
+        .share-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .share-link a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+        }
+        
+        .share-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        .share-link span {
+            color: #666;
+        }
+        
+        .share-url {
+            display: flex;
+            align-items: center;
+            background-color: #eee;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-top: 15px;
+        }
+        
+        .share-url input {
+            flex-grow: 1;
+            border: none;
+            background: none;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .copy-button {
+            border: none;
+            background: none;
+            color: #007bff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>PteroShop</h1>
-  <nav>
-    <a href="#beranda">Beranda</a>
-    <a href="#layanan">Layanan</a>
-    <a href="#tentang">Tentang Kami</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
-</header>
+    <div class="video-player-container">
+        <video controls>
+            <source src="https://drive.google.com/uc?export=download&id=1aBcDeFgHiJkLmNoPqRsTuVwXyZ" type="video/mp4">
+            <p>Browser Anda tidak mendukung pemutaran video.</p>
+        </video>
 
-<div class="container" id="beranda">
-  <h2>Selamat Datang di PteroShop</h2>
-  <p>Kami menyediakan panel Pterodactyl, hosting game, dan VPS dengan harga terjangkau.</p>
-
-  <section id="layanan">
-    <h2>Layanan Kami</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Paket Hosting Game</h3>
-        <p>Panel Pterodactyl untuk game Minecraft, FiveM, dan lainnya.</p>
-        <p><strong>Rp 25.000/bulan</strong></p>
-        <a href="beli.html"><button>Pesan Sekarang</button></a>
-      </div>
-      <div class="service-card">
-        <h3>Paket VPS</h3>
-        <p>Server VPS dengan performa tinggi untuk kebutuhan Anda.</p>
-        <p><strong>Rp 50.000/bulan</strong></p>
-        <a href="beli.html"><button>Pesan Sekarang</button></a>
-      </div>
+        <div class="share-section">
+            <h4>Bagikan tautan ini</h4>
+            <div class="share-links">
+                <div class="share-link">
+                    <span class="share-icon" style="background-color: #007bff;"></span>
+                    <span>Salin tautan</span>
+                </div>
+                <div class="share-link">
+                    <span class="share-icon" style="background-color: #25D366;"></span>
+                    <span>WhatsApp</span>
+                </div>
+                <div class="share-link">
+                    <span class="share-icon" style="background-color: #0088CC;"></span>
+                    <span>Telegram</span>
+                </div>
+                <div class="share-link">
+                    <span class="share-icon" style="background-color: #1877F2;"></span>
+                    <span>Facebook</span>
+                </div>
+            </div>
+            
+            <div class="share-url">
+                <input id="videoLink" type="text" value="https://drive.google.com/uc?export=download&id=1aBcDeFgHiJkLmNoPqRsTuVwXyZ" readonly>
+                <button class="copy-button" onclick="copyLink()">Salin</button>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <section class="about" id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>PteroShop berdedikasi untuk menyediakan layanan hosting game dan server VPS terbaik dengan harga bersahabat. Kami fokus pada kualitas, kecepatan, dan dukungan pelanggan.</p>
-  </section>
-
-  <section class="contact" id="kontak">
-    <h2>Kontak Kami</h2>
-    <form>
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="5" placeholder="Pesan" required></textarea>
-      <button type="submit">Kirim</button>
-    </form>
-    <p>Email: support@pteroshop.com | Telepon: +62 812-3456-7890</p>
-  </section>
-</div>
-
-<footer>
-  <p>&copy; 2025 PteroShop. Semua Hak Dilindungi.</p>
-  <a href="#">Privasi</a> | <a href="#">Ketentuan</a>
-</footer>
+    
+    <script>
+        function copyLink() {
+            var copyText = document.getElementById("videoLink");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Link telah disalin: " + copyText.value);
+        }
+    </script>
 
 </body>
 </html>
